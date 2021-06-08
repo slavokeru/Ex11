@@ -1,10 +1,17 @@
 // Copyright 2021
 #include <iostream>
-#include <string>
+#include <ctime>
 
 #include "train.h"
 
 int main() {
-  return 0;
+    srand(time(0));
+    Train train;
+    int numberCages = 100;
+    for (int i = 0; i < numberCages; ++i) {
+        train.addCage();
+    }
+    train.printCages();
+    std::cout << train.length();
+    return 0;
 }
-
