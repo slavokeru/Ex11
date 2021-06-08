@@ -1,21 +1,20 @@
 // Copyright 2021
 #include "train.h"
 #include <iostream>
-#include <random>
 
 Train::Train() {
     first = nullptr;
     last = nullptr;
-};
+}
 
 void Train::addCage() {
     if (!first) {
-        first = new Cage(rand() % 2);
+        first = new Cage(std::rand() % 2);
         last = first;
         first->next = last;
         first->prev = last;
     } else {
-        Cage* newCage = new Cage(rand() % 2);
+        Cage* newCage = new Cage(std::rand() % 2);
         last->next = newCage;
         newCage->next = first;
         newCage->prev = last;
