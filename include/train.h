@@ -4,24 +4,32 @@
 
 class Cage {
     bool light;
- public:
-    Cage* next;
-    Cage* prev;
-    Cage(bool isLightOn): light(isLightOn), next(nullptr), prev(nullptr) {}
-    void on()  { light = true;    }
+public:
+    Cage *next;
+    Cage *prev;
+
+    explicit Cage(bool isLightOn) : light(isLightOn), next(nullptr), prev(nullptr) {}
+
+    void on() { light = true; }
+
     void off() { light = false; }
-    bool get() const  { return light;  }
+
+    bool get() const { return light; }
 };
 
 class Train {
- private:
-    Cage* first;
-    Cage* last;
- public:
+private:
+    Cage *first;
+    Cage *last;
+public:
     Train();
+
     ~Train();
+
     void addCage();
+
     void printCages() const;
+
     int length() const;
 };
 

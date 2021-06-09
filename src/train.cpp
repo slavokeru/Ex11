@@ -26,12 +26,14 @@ void Train::addCage() {
 void Train::printCages() const {
     int i = 1;
     Cage* tmp = first;
-    while(tmp != last) {
-        std::cout << "The cage #" << i++ << " with light is " << ((tmp->get()) ? "on" : "off")
+    while (tmp != last) {
+        std::cout << "The cage #" << i++ << " with light is "
+        << ((tmp->get()) ? "on" : "off")
                   << std::endl;
         tmp = tmp->next;
     }
-    std::cout << "The cage #" << i++ << " with light is " << ((tmp->get()) ? "on" : "off")
+    std::cout << "The cage #" << i++ << " with light is "
+        << ((tmp->get()) ? "on" : "off")
               << std::endl;
 }
 
