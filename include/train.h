@@ -4,11 +4,12 @@
 
 class Cage {
     bool light;
-public:
+ public:
     Cage *next;
     Cage *prev;
 
-    explicit Cage(bool isLightOn) : light(isLightOn), next(nullptr), prev(nullptr) {}
+    explicit Cage(bool isLightOn) : light(isLightOn), next(nullptr),
+                                    prev(nullptr) {}
 
     void on() { light = true; }
 
@@ -18,10 +19,10 @@ public:
 };
 
 class Train {
-private:
+ private:
     Cage *first;
     Cage *last;
-public:
+ public:
     Train();
 
     ~Train();
